@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AudioFiles">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AKAAAAgAAEgAAQAAAVAAAAAAAEAAJAAAAAEAAAAgAgA=</HashCode>
+      <FileName>App_Code\AudioFiles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Comments">
+    <Position X="2.25" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>ABAgAEAAAAQAAAAAAABEQAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>App_Code\Comments.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dal">
+    <Position X="4.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAABAAAAAAAAAAAAEgAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\Dal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Likes">
+    <Position X="4.75" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAQAAAAAAAAAAAAFAAAAAAIAAAgABAAA=</HashCode>
+      <FileName>App_Code\Likes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Users">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAEAAAACAAACQAAAAAgAAAAAAEAAAA=</HashCode>
+      <FileName>App_Code\Users.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebService">
+    <Position X="6.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAABAAEAAAAAkAA=</HashCode>
+      <FileName>App_Code\WebService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebServiceDal">
+    <Position X="2.25" Y="3" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAABAAAAAAAAAAAAEgAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\WebServiceDal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

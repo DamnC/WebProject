@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server" >
+<LINK href="StyleSheet.css" rel="stylesheet" type="text/css">
+    <title></title>
+    <script type="text/javascript">
+        function Search() {
+            var value = document.getElementById("SearchBar").value; 
+            window.location.href="Search.aspx?q="+value;
+        }
+    </script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+
+<body
+    style="background-image: url('Images/MasterUp.png');
+    background-repeat: repeat-x; margin: auto; 
+    position: fixed;
+    left:0;
+    right: 0;
+    top: -3px;
+    bottom: 0;
+    width:auto;
+    background-color:Gray;
+    font-family:Contra">
+    
+    <div style="margin-left:17.5%;margin-right:17.5%">
+        <img src="Images/Cloud.png" onclick="window.location.href='/Project/Home.aspx'" style="cursor: pointer; float:left" />
+        <img src="Images/Explore.png" onclick="window.location.href='/Project/Explore.aspx'" onmouseover="this.src='Images/ExploreWhite.png';" onmouseout="this.src='Images/Explore.png';" style="cursor: pointer;position:inherit; left:15%; " />        
+        <%if (Session["Username"] == null) Response.Write("<img src=\"Images/SigninButton.png\" onclick=\"window.location.href='/Project/Login.aspx'\" style=\"cursor: pointer; float:right\" />"); %>
+        <%if (Session["Username"] == null) Response.Write("<img src=\"Images/SignupButton.png\" onclick=\"window.location.href='/Project/Signup.aspx'\" style=\"cursor: pointer; float:right\" />"); %>
+        <%if (Session["Username"] != null) Response.Write("<img src=\"Images/LogoutButton.png\" onclick=\"window.location.href='/Project/Logout.aspx'\" style=\"cursor: pointer; float:right\" />"); %>
+        <%if (Session["Username"] != null) Response.Write("<img src=\"Images/Likes.png\" onclick=\"window.location.href='/Project/MyLikes.aspx'\" onmouseover=\"this.src='Images/LikesBright.png';\" onmouseout=\"this.src='Images/Likes.png';\" style=\"cursor: pointer; float:right\" />"); %>
+        <%if (Session["Username"] != null) Response.Write("<img src=\"Images/Upload.png\" onclick=\"window.location.href='/Project/Upload.aspx'\" style=\"cursor: pointer; float:right\" />"); %>
+        <input id="SearchBar" style="max-width:40%; min-width:50px; width:100%; height:28px; position:absolute; left: 27.5%; top:7px; z-index:0" 
+        type="text" value="" title="Search">
+        <input style="position:absolute; top:7px; right: 32.5%" type="image" src="images/search.png" onclick="Search()" alt="Search" />
+    </div>
+    <div id="background" style="height:auto; margin-left:17.5%;margin-right:17.5%; background-color:White; min-height:100%">
+    <% if (Session["Username"] == null) { Response.Write("<img width=\"100%\" src='Images/ImageForHome.png'/>"); } else { Response.Write("<img width=\"100%\" src='Images/ImageForHomeLoggedIn.png'/>"); }%>    
+    <div style="margin-left:17.5%;margin-right:17.5%;">
+        <p><%Response.Write(welcome); %></p>
+        <center>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server" >
+        
+        </asp:ContentPlaceHolder> 
+        </center>
+        <a href="About.aspx" style="text-align: center; left:48.5%; bottom:5px; position:fixed;">About us</a>
+        </div>  
+     </div>
+     </div>
+</body>
+  
+</html>
